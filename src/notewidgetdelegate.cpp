@@ -167,7 +167,7 @@ void NoteWidgetDelegate::paintLabels(QPainter* painter, const QStyleOptionViewIt
     const int spaceY = 1;       // space between title and date
 
     QString title{index.data(NoteModel::NoteFullTitle).toString()};
-    QFont titleFont = (option.state & QStyle::State_Selected) == QStyle::State_Selected ? m_titleSelectedFont : m_titleFont;
+    QFont titleFont = (option.state & QStyle::State_Selected) == QStyle::State_Selected ? m_titleFont : m_titleFont;
     QFontMetrics fmTitle(titleFont);
     QRect fmRectTitle = fmTitle.boundingRect(title);
 

@@ -499,7 +499,7 @@ void MainWindow::setupLineEdit ()
                          "  border: 1px solid rgb(205, 205, 205);"
                          "  border-radius: 3px;"
                          "  background: rgb(255, 255, 255);"
-                         "  selection-background-color: rgb(61, 155, 218);"
+                         "  selection-background-color: rgb(172,213,255);"
                          "} "
                          "QToolButton { "
                          "  border: none; "
@@ -508,6 +508,8 @@ void MainWindow::setupLineEdit ()
                          ).arg(frameWidth + 1);
 
     lineEdit->setStyleSheet(ss);
+
+    lineEdit->setAttribute(Qt::WA_MacShowFocusRect, 0);
 
     // clear button
     m_clearButton = new QToolButton(lineEdit);
@@ -546,7 +548,7 @@ void MainWindow::setupLineEdit ()
 */
 void MainWindow::setupTextEdit ()
 {
-    QString ss = QString("QTextEdit {background-image: url(:images/textEdit_background_pattern.png); padding-left: %1px; padding-right: %2px; padding-bottom:2px;} "
+    QString ss = QString("QTextEdit {background-image: url(:images/textEdit_background_pattern.png); selection-background-color: rgb(172,213,255); padding-left: %1px; padding-right: %2px; padding-bottom:2px;} "
                          "QScrollBar::handle:vertical:hover { background: rgb(170, 170, 171); } "
                          "QScrollBar::handle:vertical:pressed { background: rgb(149, 149, 149); } "
                          "QScrollBar::handle:vertical { border-radius: 4px; background: rgb(188, 188, 188); min-height: 20px; }  "
@@ -2347,17 +2349,17 @@ bool MainWindow::eventFilter (QObject *object, QEvent *event)
 
             if(object == m_newNoteButton){
                 this->setCursor(Qt::PointingHandCursor);
-                m_newNoteButton->setIcon(QIcon(":/images/newNote_Hovered.png"));
+                m_newNoteButton->setIcon(QIcon(":/images/newNote_Regular.png"));
             }
 
             if(object == m_trashButton){
                 this->setCursor(Qt::PointingHandCursor);
-                m_trashButton->setIcon(QIcon(":/images/trashCan_Hovered.png"));
+                m_trashButton->setIcon(QIcon(":/images/trashCan_Regular.png"));
             }
 
             if(object == m_dotsButton){
                 this->setCursor(Qt::PointingHandCursor);
-                m_dotsButton->setIcon(QIcon(":/images/3dots_Hovered.png"));
+                m_dotsButton->setIcon(QIcon(":/images/3dots_Regular.png"));
             }
         }
 
@@ -2508,7 +2510,7 @@ bool MainWindow::eventFilter (QObject *object, QEvent *event)
                                  "  border: 1px solid rgb(61, 155, 218);"
                                  "  border-radius: 3px;"
                                  "  background: rgb(255, 255, 255);"
-                                 "  selection-background-color: rgb(61, 155, 218);"
+                                 "  selection-background-color: rgb(172,213,255);"
                                  "} "
                                  "QToolButton { "
                                  "  border: none; "
@@ -2534,7 +2536,7 @@ bool MainWindow::eventFilter (QObject *object, QEvent *event)
                                  "  border: 1px solid rgb(205, 205, 205);"
                                  "  border-radius: 3px;"
                                  "  background: rgb(255, 255, 255);"
-                                 "  selection-background-color: rgb(61, 155, 218);"
+                                 "  selection-background-color: rgb(172,213,255);"
                                  "} "
                                  "QToolButton { "
                                  "  border: none; "
