@@ -1,9 +1,9 @@
 [submodule "3rdParty/qautostart"]
 	path = 3rdParty/qautostart
-	url = https://github.com/b00f/qautostart.git
+	url = https://hub.fastgit.org/b00f/qautostart.git
 [submodule "3rdParty/qmarkdowntextedit"]
 	path = 3rdParty/qmarkdowntextedit
-	url = https://github.com/pbek/qmarkdowntextedit
+	url = https://hub.fastgit.org/pbek/qmarkdowntextedit
 [submodule "3rdParty/QSimpleUpdater"]
 	path = 3rdParty/QSimpleUpdater
-	url = https://github.com/alex-spataru/QSimpleUpdater
+	url = https://hub.fastgit.org/alex-spataru/QSimpleUpdater
